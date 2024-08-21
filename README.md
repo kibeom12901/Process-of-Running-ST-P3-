@@ -28,7 +28,7 @@
     ```bash
     bash scripts/train_prediction.sh stp3/configs/nuscenes/Prediction.yml data/Nuscenes tensorboard_logs/09August2024at13_52_16KST_SimulationPC_Perception/default/version_0/checkpoints/epoch=19-step=174159.ckpt
     ```
-![Sample Image](photo_6210866531194224435_y.jpg)
+    <img src="photo_6210866531194224435_y.jpg" alt="Sample Image" width="600"/>
 
 - **Entiner Model E2E training:**
   - Encountered a memory issue during this process, which was resolved by reducing the batch size to 1.
