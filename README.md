@@ -8,7 +8,8 @@
   - Initially attempted to generate data for `Town01_Tiny`.
   - Created a new directory to fix an error related to the data path.
   - Upon further review, identified that the error was due to an incorrect directory path within the data folder, where a separate data path was needed for NuScenes.
-  - Downloaded the entire NuScenes dataset to correct the issue. Using https://www.nuscenes.org/login?prevpath=download&prevhash=
+  - Downloaded the entire NuScenes dataset to correct the issue. Using [this link](https://www.nuscenes.org/login?prevpath=download&prevhash=).
+
 
 - **Training the Perception Module:**
   - Executed the following command to start Perception Module Pretraining:
