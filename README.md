@@ -21,6 +21,7 @@
   - The model gets trained up to Epoch 19, accumulating data from epochs 1-
 
     ![Sample Image](photo_6188453862835339291_w.jpg)
+    <img src="photo_6188453862835339291_w.jpg" alt="Sample Image" width="300"/>
 
 
 - **Prediction Module Training:**
