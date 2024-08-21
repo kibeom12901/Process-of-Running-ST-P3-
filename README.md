@@ -20,7 +20,7 @@
   - The entire training process is expected to take 8-9 days, covering 41 epochs.
   - The model gets trained up to Epoch 19, accumulating data from epochs 1-
 
-    ![Sample Image](photo_6210866531194224435_y.jpg)
+    ![Sample Image](photo_6188453862835339291_w.jpg)
 
 
 - **Prediction Module Training:**
@@ -28,11 +28,12 @@
     ```bash
     bash scripts/train_prediction.sh stp3/configs/nuscenes/Prediction.yml data/Nuscenes tensorboard_logs/09August2024at13_52_16KST_SimulationPC_Perception/default/version_0/checkpoints/epoch=19-step=174159.ckpt
     ```
+![Sample Image](photo_6210866531194224435_y.jpg)
+
+- **Entiner Model E2E training:**
+  - Encountered a memory issue during this process, which was resolved by reducing the batch size to 1.
   - Performed evaluation twice:
     - Once using the pretrained model.
     - Once using the prediction-trained model.
   - The purpose was to compare and analyze differences between the models.
-
-- **Challenges Encountered:**
-  - Encountered a memory issue during this process, which was resolved by reducing the batch size to 1.
 
