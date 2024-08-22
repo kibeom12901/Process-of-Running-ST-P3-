@@ -1,5 +1,3 @@
-<img width="1440" alt="Screenshot 2024-08-22 at 11 19 09 AM" src="https://github.com/user-attachments/assets/b662eedf-701c-4a7d-a9d4-b0142d509337"># Process-of-Running-ST-P3
-
 ## Progress Log
 
 ### 8/5/2024 Onwards - ST-P3 Workflow
