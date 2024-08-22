@@ -1,4 +1,4 @@
-# Process-of-Running-ST-P3
+<img width="1440" alt="Screenshot 2024-08-22 at 11 19 09 AM" src="https://github.com/user-attachments/assets/b662eedf-701c-4a7d-a9d4-b0142d509337"># Process-of-Running-ST-P3
 
 ## Progress Log
 
@@ -20,7 +20,7 @@
   - The entire training process is expected to take 8-9 days, covering 41 epochs.
   - The model gets trained up to Epoch 19, accumulating data from epochs 1-
   - 
-    <img src="photo_6188453862835339291_w.jpg" alt="Sample Image" width="600"/>
+<img width="600" alt="Screenshot 2024-08-22 at 11 20 10 AM" src="https://github.com/user-attachments/assets/a560bea8-098f-4ed5-a1aa-a8c122024e0d">
 
 
 - **Prediction Module Training:**
@@ -28,7 +28,7 @@
     ```bash
     bash scripts/train_prediction.sh stp3/configs/nuscenes/Prediction.yml data/Nuscenes tensorboard_logs/09August2024at13_52_16KST_SimulationPC_Perception/default/version_0/checkpoints/epoch=19-step=174159.ckpt
     ```
-    <img src="photo_6210866531194224435_y.jpg" alt="Sample Image" width="600"/>
+<img width="600" alt="Screenshot 2024-08-22 at 11 21 21 AM" src="https://github.com/user-attachments/assets/21e96725-5941-4ede-bf3d-2e5ec5835c1b">
 
 - **Entiner Model E2E training:**
   - Encountered a memory issue during this process, which was resolved by reducing the batch size to 1.
@@ -36,4 +36,7 @@
     - Once using the pretrained model.
     - Once using the prediction-trained model.
   - The purpose was to compare and analyze differences between the models.
+  
+ 
+For more details and updates, you can refer to the official [ST-P3 GitHub repository](https://github.com/OpenDriveLab/ST-P3).
 
