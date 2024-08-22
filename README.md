@@ -19,8 +19,7 @@
   - The model gets trained up to Epoch 19, accumulating data from epochs 1
     
     <img width="600" alt="Screenshot 2024-08-22 at 11 20 10 AM" src="https://github.com/user-attachments/assets/a560bea8-098f-4ed5-a1aa-a8c122024e0d">
-
-
+    
 - **Prediction Module Training:**
   - Began training the prediction module with the following command:
     ```bash
@@ -83,7 +82,7 @@
       - **Planning Metrics:** 
         - The model demonstrates low collision probabilities with objects and bounding boxes within the first 1 to 3 seconds, indicating relatively safe trajectory planning.
         - However, the L2 distance error increases over time, suggesting that the predicted trajectories deviate more from the ground truth as the prediction horizon extends.
-        <img width="600" alt="Screenshot 2024-08-22 at 1 28 45 PM" src="https://github.com/user-attachments/assets/18cc17c0-c908-4891-bbdc-ba682ef690bd">
+        <img width="350" alt="Screenshot 2024-08-22 at 1 39 07 PM" src="https://github.com/user-attachments/assets/dfcbd05d-707c-473b-846a-e1451e43eb13">
     - [Images](https://drive.google.com/drive/folders/1ejEUI5i4BnId_sAtOOkq8c-44bW-Y0yN)
 
   
