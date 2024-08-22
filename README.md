@@ -18,8 +18,8 @@
     ```
   - Training approximately took 5 days with one Nvidia GPU.
   - The entire training process is expected to take 8-9 days, covering 41 epochs.
-  - The model gets trained up to Epoch 19, accumulating data from epochs 1-
-  - 
+  - The model gets trained up to Epoch 19, accumulating data from epochs 1
+    
 <img width="600" alt="Screenshot 2024-08-22 at 11 20 10 AM" src="https://github.com/user-attachments/assets/a560bea8-098f-4ed5-a1aa-a8c122024e0d">
 
 
