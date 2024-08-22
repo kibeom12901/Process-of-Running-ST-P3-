@@ -83,8 +83,9 @@
       - **Planning Metrics:** 
         - The model demonstrates low collision probabilities with objects and bounding boxes within the first 1 to 3 seconds, indicating relatively safe trajectory planning.
         - However, the L2 distance error increases over time, suggesting that the predicted trajectories deviate more from the ground truth as the prediction horizon extends.
-        <img width="742" alt="Screenshot 2024-08-22 at 1 28 45 PM" src="https://github.com/user-attachments/assets/18cc17c0-c908-4891-bbdc-ba682ef690bd">
-    - [Images]([https://github.com/OpenDriveLab/ST-P3](https://drive.google.com/drive/folders/1ejEUI5i4BnId_sAtOOkq8c-44bW-Y0yN)).
+        <img width="600" alt="Screenshot 2024-08-22 at 1 28 45 PM" src="https://github.com/user-attachments/assets/18cc17c0-c908-4891-bbdc-ba682ef690bd">
+    - [Images](https://drive.google.com/drive/folders/1ejEUI5i4BnId_sAtOOkq8c-44bW-Y0yN)
+
   
  
 For more details and updates, you can refer to the official [ST-P3 GitHub repository](https://github.com/OpenDriveLab/ST-P3).
