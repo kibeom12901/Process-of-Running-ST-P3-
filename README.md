@@ -18,7 +18,7 @@
   - The entire training process is expected to take 8-9 days, covering 41 epochs.
   - The model gets trained up to Epoch 19, accumulating data from epochs 1
     
-<img width="600" alt="Screenshot 2024-08-22 at 11 20 10 AM" src="https://github.com/user-attachments/assets/a560bea8-098f-4ed5-a1aa-a8c122024e0d">
+    <img width="600" alt="Screenshot 2024-08-22 at 11 20 10 AM" src="https://github.com/user-attachments/assets/a560bea8-098f-4ed5-a1aa-a8c122024e0d">
 
 
 - **Prediction Module Training:**
@@ -26,7 +26,7 @@
     ```bash
     bash scripts/train_prediction.sh stp3/configs/nuscenes/Prediction.yml data/Nuscenes tensorboard_logs/09August2024at13_52_16KST_SimulationPC_Perception/default/version_0/checkpoints/epoch=19-step=174159.ckpt
     ```
-<img width="600" alt="Screenshot 2024-08-22 at 11 21 21 AM" src="https://github.com/user-attachments/assets/21e96725-5941-4ede-bf3d-2e5ec5835c1b">
+    <img width="600" alt="Screenshot 2024-08-22 at 11 21 21 AM" src="https://github.com/user-attachments/assets/21e96725-5941-4ede-bf3d-2e5ec5835c1b">
 
 - **Entire Model E2E training:**
   - Encountered a memory issue during this process, which was resolved by reducing the batch size to 1.
@@ -59,9 +59,32 @@
       - **`plan_obj_col_3s`:** Represents the probability of the planned trajectory colliding with an object within 3 seconds. This metric assesses the risk of collision over a longer planning horizon.
       - **`plan_obj_box_col_3s`:** Similar to `plan_obj_col_3s`, this measures the probability of collision with bounding boxes after 3 seconds.
       - **`plan_L2_3s`:** Indicates the L2 distance error between the planned trajectory and the ground truth after 3 seconds, showing how the accuracy of the trajectory prediction changes over time.
+  
+    - **Image Explanation:**
+      - **Camera Views:** The images include multiple camera views (e.g., `FRONT`, `FRONT LEFT`, `FRONT RIGHT`, `BACK`, etc.) from the autonomous vehicle. These views display the actual scene as captured by the vehicle's cameras during the evaluation process.
+        - These camera views help visualize what the model "sees" and how it interprets the environment in real-time.
+      
+      - **Top-Down View with HD Map Overlay:** The top-down view on the right side of the image shows an HD map with overlaid predictions.
+        - **Lane Dividers:** Represented typically in a specific color (e.g., blue), showing where the model predicts lane dividers to be.
+        - **Drivable Area:** Another color (e.g., gray) shows where the model predicts drivable areas in the environment.
+        - **Vehicle and Pedestrian Segmentation:** Different colors (e.g., orange for vehicles and blue for pedestrians) indicate where the model has detected vehicles and pedestrians in the scene.
+        - **Trajectory Visualization:** The predicted vehicle trajectory is often shown as a path overlaid on this map, comparing it to the ground truth trajectory to evaluate accuracy.
+      
+      - **Purpose of Visuals:** 
+        - These visuals allow you to assess how well the model’s predictions align with the actual scene, providing a qualitative understanding of the model’s performance in real-world scenarios.
+        - You can compare these visual predictions against the IoU and planning metrics to get a comprehensive view of the model's effectiveness.
 
-
-  -Evluation of perception trained model with 2 epochs
+  - **Evaluation of perception trained model with 2 epochs (extreme case):**
+    - The evaluation results show that the model’s performance varies across different metrics:
+      - **Vehicle IoU:** The model shows moderate accuracy in identifying vehicles in the scene.
+      - **Pedestrian IoU:** The model struggles with detecting pedestrians, as indicated by a lower IoU score.
+      - **Lane Divider IoU:** The accuracy of lane divider detection is moderate, but there's room for improvement.
+      - **Drivable Area IoU:** The model performs relatively well in identifying drivable areas, with a higher IoU score compared to other classes.
+      - **Planning Metrics:** 
+        - The model demonstrates low collision probabilities with objects and bounding boxes within the first 1 to 3 seconds, indicating relatively safe trajectory planning.
+        - However, the L2 distance error increases over time, suggesting that the predicted trajectories deviate more from the ground truth as the prediction horizon extends.
+        <img width="742" alt="Screenshot 2024-08-22 at 1 28 45 PM" src="https://github.com/user-attachments/assets/18cc17c0-c908-4891-bbdc-ba682ef690bd">
+    - [Images]([https://github.com/OpenDriveLab/ST-P3](https://drive.google.com/drive/folders/1ejEUI5i4BnId_sAtOOkq8c-44bW-Y0yN)).
   
  
 For more details and updates, you can refer to the official [ST-P3 GitHub repository](https://github.com/OpenDriveLab/ST-P3).
