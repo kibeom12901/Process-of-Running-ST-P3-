@@ -41,7 +41,7 @@
     ```bash
     bash scripts/eval_plan.sh tensorboard_logs/21August2024at10_25_26KST_SimulationPC2_Planning/default/version_0/checkpoints/last.ckpt data/Nuscenes
     ```
-    - The result contains the following metrics:
+  - The result contains the following metrics:
 
     - **IoU Metrics:**
       - **`vehicle_iou`:** This measures how well the model is identifying vehicles in the scene by comparing the predicted vehicle segments with the actual vehicles present.
@@ -59,6 +59,7 @@
       - **`plan_obj_col_3s`:** Represents the probability of the planned trajectory colliding with an object within 3 seconds. This metric assesses the risk of collision over a longer planning horizon.
       - **`plan_obj_box_col_3s`:** Similar to `plan_obj_col_3s`, this measures the probability of collision with bounding boxes after 3 seconds.
       - **`plan_L2_3s`:** Indicates the L2 distance error between the planned trajectory and the ground truth after 3 seconds, showing how the accuracy of the trajectory prediction changes over time.
+
 
   -Evluation of perception trained model with 2 epochs
   
