@@ -3,7 +3,8 @@
 ### 8/5/2024 Onwards - ST-P3 Workflow
 
 <img width="822" alt="Screenshot 2024-08-26 at 4 57 43 PM" src="https://github.com/user-attachments/assets/21e01630-ca95-402f-baba-59b0b5e9aa7a">
-- **ST-P3 Framework Overview:**
+
+**ST-P3 Framework Overview:**
   - **Input:** Utilizes multiple camera views (`T-step N-view Camera`) capturing the environment around the vehicle over time.
   - **High-Level Command:** Directs the vehicle’s actions, such as "Go Straight."
   
