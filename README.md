@@ -31,7 +31,7 @@
 - Training approximately took 5 days with one Nvidia GPU.
 - The model was trained up to Epoch 19, accumulating data from epochs 1.
 
-![Perception Training Progress](https://github.com/user-attachments/assets/a560bea8-098f-4ed5-a1aa-a8c122024e0d)
+<img src="https://github.com/user-attachments/assets/a560bea8-098f-4ed5-a1aa-a8c122024e0d" alt="Perception Training Progress" width="600">
 
 ### Prediction Module Training
 - Began training the prediction module with the following command:
@@ -39,7 +39,7 @@
     bash scripts/train_prediction.sh stp3/configs/nuscenes/Prediction.yml data/Nuscenes tensorboard_logs/09August2024at13_52_16KST_SimulationPC_Perception/default/version_0/checkpoints/epoch=19-step=174159.ckpt
     ```
 
-![Prediction Training Progress](https://github.com/user-attachments/assets/21e96725-5941-4ede-bf3d-2e5ec5835c1b)
+<img src="https://github.com/user-attachments/assets/21e96725-5941-4ede-bf3d-2e5ec5835c1b" alt="Prediction Training Progress" width="600">
 
 ### Entire Model E2E Training
 - Encountered a memory issue during this process, which was resolved by reducing the batch size to 1.
@@ -65,7 +65,7 @@
     - The model demonstrates low collision probabilities with objects and bounding boxes within the first 1 to 3 seconds, indicating relatively safe trajectory planning.
     - However, the L2 distance error increases over time, suggesting that the predicted trajectories deviate more from the ground truth as the prediction horizon extends.
 
-![Evaluation Results](https://github.com/user-attachments/assets/dfcbd05d-707c-473b-846a-e1451e43eb13)
+<img src="https://github.com/user-attachments/assets/dfcbd05d-707c-473b-846a-e1451e43eb13" alt="Evaluation Results" width="600">
 
 [Images for HD maps](https://drive.google.com/drive/folders/1ejEUI5i4BnId_sAtOOkq8c-44bW-Y0yN)
 
