@@ -20,7 +20,7 @@
 - **Planning Module:**
   - Creates the final vehicle trajectory (**SDV Trajectories**) by integrating BEV features, scene predictions, and front-view vision features, guided by high-level commands.
      
-Further Information can be found in my [ST-P3 Overview Summary]([https://github.com/OpenDriveLab/ST-P3](https://github.com/kibeom12901/Overview-of-ST-P3-A-Unified-Vision-Based-Autonomous-Driving-Framework).
+Further information can be found in my [ST-P3 Overview Summary](https://github.com/kibeom12901/Overview-of-ST-P3-A-Unified-Vision-Based-Autonomous-Driving-Framework).
 
 ### Data Generation for E2E Training
 - Downloaded the entire NuScenes dataset using [this link](https://www.nuscenes.org/login?prevpath=download&prevhash=).
