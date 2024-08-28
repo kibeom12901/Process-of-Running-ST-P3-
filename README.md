@@ -68,9 +68,11 @@ Further information can be found in my [ST-P3 Overview Summary](https://github.c
     - However, the L2 distance error increases over time, suggesting that the predicted trajectories deviate more from the ground truth as the prediction horizon extends.
 
       <img src="https://github.com/user-attachments/assets/dfcbd05d-707c-473b-846a-e1451e43eb13" alt="Evaluation Results" width="600">
+      
       **Performance Metrics of Perception Module After 2 Epochs of Training on the ST-P3 Autonomous Driving Model**
 
       <img width="1195" alt="Screenshot 2024-08-28 at 10 20 56 AM" src="https://github.com/user-attachments/assets/d652041a-485a-4b27-8f2f-eb71014df7b4">
+      
       **Sample Image of HD map**
       
       [Rest of the HD maps are here](https://drive.google.com/drive/folders/1ejEUI5i4BnId_sAtOOkq8c-44bW-Y0yN)
