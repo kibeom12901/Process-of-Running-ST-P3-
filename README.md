@@ -33,7 +33,7 @@ Further information can be found in my [ST-P3 Overview Summary](https://github.c
 - Training approximately took 5 days with one Nvidia GPU.
 - The model was trained up to Epoch 19, accumulating data from epochs 1.
 
-<img src="https://github.com/user-attachments/assets/a560bea8-098f-4ed5-a1aa-a8c122024e0d" alt="Perception Training Progress" width="600">
+  <img src="https://github.com/user-attachments/assets/a560bea8-098f-4ed5-a1aa-a8c122024e0d" alt="Perception Training Progress" width="600">
 
 ### Prediction Module Training
 - Began training the prediction module with the following command:
@@ -41,7 +41,7 @@ Further information can be found in my [ST-P3 Overview Summary](https://github.c
     bash scripts/train_prediction.sh stp3/configs/nuscenes/Prediction.yml data/Nuscenes tensorboard_logs/09August2024at13_52_16KST_SimulationPC_Perception/default/version_0/checkpoints/epoch=19-step=174159.ckpt
     ```
 
-<img src="https://github.com/user-attachments/assets/21e96725-5941-4ede-bf3d-2e5ec5835c1b" alt="Prediction Training Progress" width="600">
+    <img src="https://github.com/user-attachments/assets/21e96725-5941-4ede-bf3d-2e5ec5835c1b" alt="Prediction Training Progress" width="600">
 
 ### Entire Model E2E Training
 - Encountered a memory issue during this process, which was resolved by reducing the batch size to 1.
