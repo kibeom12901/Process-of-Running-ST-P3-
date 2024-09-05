@@ -22,6 +22,8 @@
      
 Further information can be found in my [ST-P3 Overview Summary](https://github.com/kibeom12901/Overview-of-ST-P3-A-Unified-Vision-Based-Autonomous-Driving-Framework).
 
+And more detailed command Guide can be found in my [ST-P3 Command Guide](https://github.com/kibeom12901/ST-P3_Command_Guide/blob/main/README.md).
+
 ### Data Generation for E2E Training
 - Downloaded the entire NuScenes dataset using [this link](https://www.nuscenes.org/login?prevpath=download&prevhash=).
 
