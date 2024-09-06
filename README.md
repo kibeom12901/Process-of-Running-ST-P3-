@@ -30,7 +30,7 @@ And more detailed command Guide can be found in my [ST-P3 Command Guide](https:/
 ### Training the Perception Module
 - Executed the following command to start Perception Module Pretraining:
     ```bash
-    bash scripts/train_perceive.sh stp3/configs/nuscenes/Perception.yml /data/Nuscene
+    bash scripts/train_perceive.sh stp3/configs/nuscenes/Perception.yml data/Nuscenes
     ```
 - Training approximately took 5 days with one Nvidia GPU.
 - The model was trained up to Epoch 19, accumulating data from epochs 1.
@@ -40,26 +40,38 @@ And more detailed command Guide can be found in my [ST-P3 Command Guide](https:/
 ### Prediction Module Training
 - Began training the prediction module with the following command:
     ```bash
-    bash scripts/train_prediction.sh stp3/configs/nuscenes/Prediction.yml data/Nuscenes tensorboard_logs/09August2024at13_52_16KST_SimulationPC_Perception/default/version_0/checkpoints/epoch=19-step=174159.ckpt
+    bash scripts/train_prediction.sh stp3/configs/nuscenes/Prediction.yml data/Nuscenes ST-    P3/tensorboard_logs/30August2024at13_22_38KST_SimulationPC_Perception/default/version_0/checkpoints/last.ckpt
     ```
 
     <img src="https://github.com/user-attachments/assets/21e96725-5941-4ede-bf3d-2e5ec5835c1b" alt="Prediction Training Progress" width="600">
 
-### Entire Model E2E Training
+### Planning - Entire Model E2E Training
 - Encountered a memory issue during this process, which was resolved by reducing the batch size to 1.
 - Performed Planning model:
   - Once using the perception-trained model with 2 epochs to test an extreme case.
   - Once using the perception-trained model with 19 epochs.
+  
+    ```bash
+    bash scripts/train_plan.sh stp3/configs/nuscenes/Planning.yml data/Nuscenes ST-P3/tensorboard_logs/30August2024at13_22_38KST_SimulationPC_Perception/default/version_0/checkpoints/last.ckpt
+    ```
+    
   - Once using the prediction-trained model with 19 epochs.
+
+    ```bash
+    bash scripts/train_plan.sh stp3/configs/nuscenes/Planning.yml data/Nuscenes ST-P3/tensorboard_logs/17September2024at18_15_56KST_SimulationPC_Prediction/default/version_0/checkpoints/last.ckpt
+    ```
 - The purpose was to compare and analyze differences between the models.
 
 ### Evaluation with Entire E2E Trained Model
 - Executed the following command to start Evaluation:
     ```bash
-    bash scripts/eval_plan.sh tensorboard_logs/21August2024at10_25_26KST_SimulationPC2_Planning/default/version_0/checkpoints/last.ckpt data/Nuscenes
+    bash scripts/eval_plan.sh ${checkpoint} ${dataroot}
     ```
 
 #### Evaluation of Perception-Trained Model with 2 Epochs (Extreme Case)
+
+    bash scripts/eval_plan.sh tensorboard_logs/15August2024at11_08_45KST_SimulationPC2_Planning/default/version_0/checkpoints/last.ckpt data/Nuscenes
+    
 - The evaluation results show that the model’s performance varies across different metrics:
   - **Vehicle IoU:** The model shows moderate accuracy in identifying vehicles in the scene.
   - **Pedestrian IoU:** The model struggles with detecting pedestrians, as indicated by a lower IoU score.
@@ -78,6 +90,16 @@ And more detailed command Guide can be found in my [ST-P3 Command Guide](https:/
       **Sample Image of HD map**
       
       [Rest of the HD maps are here](https://drive.google.com/drive/folders/1ejEUI5i4BnId_sAtOOkq8c-44bW-Y0yN)
+
+#### Evaluation of Perception-Trained Model with 20 Epochs 
+
+    bash scripts/eval_plan.sh ST-P3/tensorboard_logs/17September2024at18_15_56KST_SimulationPC_Perception/default/version_0/checkpoints/last.ckpt data/Nuscenes
+
+
+#### Evaluation of Prediction-Trained Model with 20 Epochs 
+
+    bash scripts/eval_plan.sh ST-P3/tensorboard_logs/23September2024at12_05_30KST_SimulationPC_Planning/default/version_0/checkpoints/last.ckpt data/Nuscenes
+
 
 #### Evaluation of Perception-Trained Model with 19 Epochs 
 
