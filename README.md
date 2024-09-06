@@ -33,7 +33,7 @@ And more detailed command Guide can be found in my [ST-P3 Command Guide](https:/
     bash scripts/train_perceive.sh stp3/configs/nuscenes/Perception.yml data/Nuscenes
     ```
 - Training approximately took 5 days with one Nvidia GPU.
-- The model was trained up to Epoch 19, accumulating data from epochs 1.
+- The model was trained up to Epoch 19, accumulating data from epochs 0.
 
   <img src="https://github.com/user-attachments/assets/a560bea8-098f-4ed5-a1aa-a8c122024e0d" alt="Perception Training Progress" width="600">
 
@@ -49,13 +49,13 @@ And more detailed command Guide can be found in my [ST-P3 Command Guide](https:/
 - Encountered a memory issue during this process, which was resolved by reducing the batch size to 1.
 - Performed Planning model:
   - Once using the perception-trained model with 2 epochs to test an extreme case.
-  - Once using the perception-trained model with 19 epochs.
+  - Once using the perception-trained model with 20 epochs.
   
     ```bash
     bash scripts/train_plan.sh stp3/configs/nuscenes/Planning.yml data/Nuscenes ST-P3/tensorboard_logs/30August2024at13_22_38KST_SimulationPC_Perception/default/version_0/checkpoints/last.ckpt
     ```
     
-  - Once using the prediction-trained model with 19 epochs.
+  - Once using the prediction-trained model with 20 epochs.
 
     ```bash
     bash scripts/train_plan.sh stp3/configs/nuscenes/Planning.yml data/Nuscenes ST-P3/tensorboard_logs/17September2024at18_15_56KST_SimulationPC_Prediction/default/version_0/checkpoints/last.ckpt
@@ -99,8 +99,5 @@ And more detailed command Guide can be found in my [ST-P3 Command Guide](https:/
 #### Evaluation of Prediction-Trained Model with 20 Epochs 
 
     bash scripts/eval_plan.sh ST-P3/tensorboard_logs/23September2024at12_05_30KST_SimulationPC_Planning/default/version_0/checkpoints/last.ckpt data/Nuscenes
-
-
-#### Evaluation of Perception-Trained Model with 19 Epochs 
 
 For more details and updates, you can refer to the official [ST-P3 GitHub repository](https://github.com/OpenDriveLab/ST-P3).
