@@ -9,7 +9,7 @@
 - **High-Level Command:** Directs the vehicle’s actions, such as "Go Straight."
 
 - **Backbone Network:**
-  - Processes the camera inputs to extract front-view vision features.
+  - Processes the camera inputs to extract front-view vision features. 
 
 - **Perception Module:**
   - Aligns and aggregates features in 3D space to create **Aligned BEV Features** (Bird’s Eye View) at different time steps (`t = 1` to `t = T`), preserving geometric information.
