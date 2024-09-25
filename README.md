@@ -16,7 +16,7 @@
 
 - **Prediction Module:**
   - Generates future scene representations over multiple time horizons (`H horizons`), using past variations to predict future outcomes.
-
+ 
 - **Planning Module:**
   - Creates the final vehicle trajectory (**SDV Trajectories**) by integrating BEV features, scene predictions, and front-view vision features, guided by high-level commands.
      
