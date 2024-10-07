@@ -14,7 +14,7 @@
 - **Perception Module:**
   - Aligns and aggregates features in 3D space to create **Aligned BEV Features** (Bird’s Eye View) at different time steps (`t = 1` to `t = T`), preserving geometric information.
 
-- **Prediction Module:**
+- **Prediction Module:** 
   - Generates future scene representations over multiple time horizons (`H horizons`), using past variations to predict future outcomes.
  
 - **Planning Module:**
